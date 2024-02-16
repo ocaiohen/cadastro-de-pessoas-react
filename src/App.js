@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import 
+{
+  MainContainer, 
+  MainContent, 
+  H1,
+  RegisterInput,
+  LabelForInput,
+  RegisterButton
+} 
+  from "./Styles.js";
 
-function App() {
+const App = () => {
+  console.log("Cheguei")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+      <MainContent>
+        <H1>HORSE</H1>
+
+        <LabelForInput for = "input-name">Name</LabelForInput>
+        <RegisterInput id = "input-name" placeholder="Name"></RegisterInput>
+
+        <LabelForInput for = "input-age">Age</LabelForInput>
+        <RegisterInput id = "input-age" type = "number" placeholder="Age"></RegisterInput>
+        
+        <RegisterButton>Register</RegisterButton>
+
+      </MainContent>  
+    </MainContainer>
+    
   );
 }
 
-export default App;
+export default App
