@@ -1,9 +1,10 @@
 import styled from "styled-components"
 import Background from "./Assets/Fundo Cadastro de Pessoas.png";
+import TrashCan from "./Assets/trash can icon.png"
 
 export const MainContainer = styled.main`
     background: url("${Background}");
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-size: cover;
     display: flex;
@@ -61,8 +62,54 @@ export const RegisterButton = styled.button`
     cursor: pointer;
     color: white;
     border-radius: 24px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     margin-top: 35px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 35px;
+    &:hover{
+        opacity: 0.9;
+    }
+    &:active{
+        opacity: 0.7;
+    }
+
+`
+export const ListOfUsersCards = styled.ul`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+export const UserCard = styled.div`
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    background: url("${Background}");
+    background-size: cover;
+    border-radius: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
+`
+export const ButtonTrashCan = styled.button`
+    width: 35px;
+    height: 35px;
+    background: url("${TrashCan}");
+    background-size: cover;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.8;
+    }
+    &:active{
+        opacity: 0.6;
+    }
 `
