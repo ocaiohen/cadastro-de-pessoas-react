@@ -98,6 +98,15 @@ export const UserCard = styled.div`
     margin-bottom: 10px;
     box-shadow: 5px 5px rgba(0, 0, 0, 0.3);
 `
+export const NameText = styled.p`
+    max-width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+`
 export const ButtonTrashCan = styled.button`
     width: 35px;
     height: 35px;

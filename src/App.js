@@ -9,6 +9,7 @@ import
   RegisterButton,
   ListOfUsersCards,
   UserCard,
+  NameText,
   ButtonTrashCan
 } 
 from "./Styles.js";
@@ -47,7 +48,7 @@ const App = () => {
           {
           users.map((user) => (
             <UserCard key = {user.id}>
-              <p>{user.name}</p> 
+              <NameText>{user.name}</NameText> 
               <p>{user.age}</p>
               <ButtonTrashCan onClick={() => deleteUser(user.id)}></ButtonTrashCan>
             </UserCard>
