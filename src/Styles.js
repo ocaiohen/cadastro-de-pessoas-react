@@ -5,7 +5,7 @@ import TrashCan from "./Assets/trash can icon.png"
 export const MainContainer = styled.main`
     background: url("${Background}");
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     background-size: cover;
     display: flex;
     flex-direction: column;
