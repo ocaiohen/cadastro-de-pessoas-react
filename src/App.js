@@ -49,8 +49,9 @@ const App = () => {
     getAndSetUsers()
   },[])
 
-  const deleteUser = (id) =>{
-    const newUsers = users.filter((user) => user.id !== id)
+  const deleteUser = async (id) =>{
+    await axios.delete(`http://localhost:3001/documents/${id}`) 
+    const {data: newUsers} = await axios.get("http://localhost:3001/documents")
     setUsers(newUsers)
   }
   return (
